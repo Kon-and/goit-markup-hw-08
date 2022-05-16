@@ -1,0 +1,17 @@
+.sitenav__current {
+  position: relative;
+  color: var(--accent-color);
+  &::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    @include zero_pos(absolute, null, 0);
+    background-color: var(--accent-color);
+    bottom: -34px;
+    border-radius: 4px;
+  }
+}
+
+.mobnav__current {
+  color: var(--accent-color);
+}

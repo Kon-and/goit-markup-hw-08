@@ -1,0 +1,33 @@
+.button {
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @include font(16px, 700, 30px, 0.06em, null);
+  color: var(--main-color);
+  @include animate();
+  border-radius: 4px;
+  border: none;
+}
+
+.button-close {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  @include flex();
+  .close__icon {
+    fill: var(--text-main);
+    width: 11px;
+    height: 11px;
+    @include animate();
+    transition-property: transform, fill;
+  }
+  &:hover .close__icon,
+  &:focus .close__icon {
+    fill: var(--accent-color);
+    transform: rotate(180deg) scale(1.3);
+  }
+}

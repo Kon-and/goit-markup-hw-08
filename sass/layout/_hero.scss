@@ -1,0 +1,60 @@
+.hero {
+  // padding-top: 200px;
+  // padding-bottom: 200px;
+  padding: 118px 60px;
+  text-align: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // max-width: 1600px;
+  // margin-left: auto;
+  // margin-right: auto;
+  .hero__title {
+    // @include font(44px, 900, 60px, 0.06em, uppercase);
+    // width: 700px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    // margin-left: auto;
+    // margin-right: auto;
+    text-align: center;
+  }
+}
+
+.hero__btn {
+  min-width: 136px;
+  padding: 10px 32px;
+  transition-property: background-color;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .hero__title {
+    @include font(26px, 900, 42px, 0.06em, uppercase);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    padding: 118px 204px;
+  }
+  .hero__title {
+    @include font(26px, 900, 42px, 0.06em, uppercase);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .hero__title {
+    @include font(44px, 900, 60px, 0.06em, uppercase);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,20 @@
+.checkbox {
+  @include flex();
+  .checkbox__icon {
+    border: 2px solid var(--text-main);
+    border-radius: 2px;
+    fill: transparent;
+    margin-right: 8px;
+    @include animate();
+    transition-property: background-color, fill, border;
+  }
+  .checkbox__input:checked + .checkbox__icon {
+    fill: var(--main-color);
+    background-color: var(--accent-color);
+    border: none;
+  }
+  .checkbox__link {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+}

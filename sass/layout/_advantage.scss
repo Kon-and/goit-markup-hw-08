@@ -1,0 +1,106 @@
+// .advantage {
+//   @include flex(flex, center, null);
+//   margin: 0px 0px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   .advantage__item + .advantage__item {
+//     margin-left: 30px;
+//   }
+//   .advantage__iconsbox {
+//     background-color: var(--main-second-color);
+//     border-radius: 4px;
+//     margin-bottom: 30px;
+//     @include flex();
+//     min-width: 270px;
+//     min-height: 120px;
+//   }
+//   .advantage__icon {
+//     width: 70px;
+//     height: 70px;
+//   }
+//   .advantage__title {
+//     @include font(14px, 700, 16px, 0.03em, uppercase);
+//   }
+//   .advantage__text {
+//     @include font(14px, null, 24px, 0.03em, null);
+//     color: var(--text-second);
+//     margin-top: 10px;
+// }
+// }
+
+.advantage__iconsbox {
+  background-color: var(--main-second-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  @include flex();
+  min-height: 120px;
+  // max-width: 450px;
+}
+.advantage__text {
+  @include font(14px, null, 24px, 0.03em, null);
+  color: var(--text-second);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.advantage__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.advantage__title {
+  @include font(14px, 700, 16px, 0.03em, uppercase);
+}
+
+// @media (max-width: 320px) {
+//   .advantage__title {
+//     text-align: center;
+//   }
+//   .advantage {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   .advantage__iconsbox {
+//     display: flex;
+//   }
+//   .advantage__icon {
+//     margin-bottom: 25px;
+//     margin-top: 25px;
+//   }
+// }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .advantage__title {
+    text-align: center;
+  }
+  .avantage__iconsbox {
+    display: flex;
+  }
+  .advantage__icon {
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .advantage__item {
+    margin-left: 30px;
+  }
+  .advantage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .advantage__item {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantage__item {
+    margin-left: 30px;
+  }
+  .advantage {
+    display: flex;
+    justify-content: center;
+  }
+}

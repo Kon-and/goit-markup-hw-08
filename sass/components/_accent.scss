@@ -1,0 +1,8 @@
+.accent-text {
+  @include animate();
+  transition-property: color;
+}
+.accent-text:hover,
+.accent-text:focus {
+  color: var(--accent-color);
+}

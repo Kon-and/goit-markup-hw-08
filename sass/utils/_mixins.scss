@@ -1,0 +1,32 @@
+@mixin font($fs, $fw, $fh, $ls, $ttr) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: ($fh / $fs);
+  letter-spacing: $ls;
+  text-transform: $ttr;
+}
+
+@mixin flex($dis: flex, $jc: center, $ai: center) {
+  display: $dis;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin animate($td: 250ms, $ttf: cubic-bezier(0.4, 0, 0.2, 1), $tp: color) {
+  transition-duration: $td;
+  transition-timing-function: $ttf;
+  transition-property: $tp;
+}
+
+@mixin сenter-xy() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin zero_pos($pos: absolute, $top: 0, $left: 0) {
+  position: $pos;
+  top: $top;
+  left: $left;
+}

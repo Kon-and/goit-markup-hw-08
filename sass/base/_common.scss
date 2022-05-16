@@ -1,0 +1,10 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  @include font(14px, null, 24px, 0.03em, null);
+  color: var(--text-main);
+  background-color: var(--main-color);
+}
+
+li {
+  list-style: none;
+}

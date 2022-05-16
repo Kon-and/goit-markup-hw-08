@@ -1,0 +1,115 @@
+.contact {
+  display: none;
+}
+.header__navigation {
+  display: none;
+}
+.contact__item:hover .contact__icons,
+.contact__text:focus .contact__icons {
+  fill: var(--accent-color);
+}
+
+.contact__icons {
+  margin-right: 10px;
+  fill: var(--text-second);
+  @include animate();
+  transition-property: fill;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    .header__container {
+      @include flex(flex, null, center);
+      border-bottom: 1px solid #ececec;
+    }
+    .header__navigation {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      margin-left: 93px;
+    }
+  }
+
+  .sitenav {
+    @include font(14px, 500, 16px, 0.02em, null);
+    display: flex;
+
+    .sitenav__item + .sitenav__item {
+      margin-left: 50px;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    @include font(14px, 500, 16px, 0.02em, null);
+    color: var(--text-second);
+    .contact__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    .header__container {
+      @include flex(flex, null, center);
+      justify-content: center;
+      border-bottom: 1px solid #ececec;
+    }
+    .header__navigation {
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      margin-left: 93px;
+    }
+  }
+  .sitenav {
+    @include font(14px, 500, 16px, 0.02em, null);
+    display: flex;
+
+    .sitenav__item + .sitenav__item {
+      margin-left: 50px;
+    }
+  }
+
+  .contact {
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    margin-left: 270px;
+    // padding-top: 21px;
+    // padding-bottom: 21px;
+    @include font(14px, 500, 16px, 0.02em, null);
+    color: var(--text-second);
+    // .contact__item {
+    //   display: inline-block;
+    // }
+    // .contact__item:not(:last-child) {
+    //   margin-bottom: 10px;
+    // }
+
+    // .contact__icons {
+    //   margin-right: 10px;
+    //   fill: var(--text-second);
+    //   @include animate();
+    //   transition-property: fill;
+    // }
+    // .contact__text {
+    //   display: flex;
+    //   align-items: center;
+    // }
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+  .contact__item + .contact__item {
+    margin-left: 50px;
+  }
+}
