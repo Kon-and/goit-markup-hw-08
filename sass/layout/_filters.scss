@@ -1,7 +1,7 @@
 .filters {
   @include flex(flex, null, null);
   flex-wrap: wrap;
-  // margin-bottom: 50px;
+  margin-bottom: 40px;
   .filters__item + .filters__item {
     margin-left: 8px;
   }
@@ -29,12 +29,13 @@
 @media (min-width: 768px) and (max-width: 1199px) {
   .filters {
     @include flex(flex, center, null);
+    margin-bottom: 14px;
   }
 }
 
 @media (min-width: 1200px) {
   .filters {
     @include flex(flex, center, null);
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 }

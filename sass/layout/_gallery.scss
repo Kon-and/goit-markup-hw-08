@@ -1,43 +1,29 @@
-.projects {
-  // width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // flex-wrap: wrap;
+.projects__title {
+  @include font(18px, 700, 36px, 0.06em, null);
+}
+.projects__text {
+  @include font(16px, null, 30px, 0.03em, null);
+  color: var(--text-second);
+}
+.projects__items {
+  background: var(--main-color);
+  box-sizing: border-box;
 
-  .projects__title {
-    @include font(18px, 700, 36px, 0.06em, null);
-  }
-  .projects__text {
-    @include font(16px, null, 30px, 0.03em, null);
-    color: var(--text-second);
-  }
-  .projects__items {
-    background: var(--main-color);
-    box-sizing: border-box;
-    // margin-left: 30px;
-    position: relative;
-  }
+  position: relative;
+}
 
-  // .projects__items:nth-child(n + 4) {
-  //   margin-top: 30px;
-  // }
-  // .projects__items:nth-child(3n + 1) {
-  //   margin-left: 0;
-  // }
-  .projects__link {
-    display: block;
-    @include animate();
-    transition-property: box-shadow;
-    &:hover,
-    &:focus {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-    &:hover .description__text,
-    &:focus .description__text {
-      transform: translateY(0);
-    }
+.projects__link {
+  display: block;
+  @include animate();
+  transition-property: box-shadow;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  &:hover .description__text,
+  &:focus .description__text {
+    transform: translateY(0);
   }
 }
 
@@ -76,33 +62,26 @@
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .projects {
-    // text-align: center;
-    // list-style: none;
-    // width: 100%;
-    // display: inline-block;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
-    // width: calc(100% / 2 - 30px);
+    align-items: center;
   }
+  .border {
+    width: 354px;
+    height: 146px;
+  }
+
   .projects__items {
-    // width: calc(100% / 2 - 30px);
-    // display: inline-block;
-  }
-  .projects__items:not(:last-child) {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
-  }
-  .projects__items:nth-child(even) {
-    margin-left: 30px;
   }
 }
 @media (min-width: 1200px) {
   .projects__items:nth-child(n + 4) {
     margin-top: 30px;
   }
-  // .projects__items:nth-child(3n + 1) {
-  //   margin-left: 30px;
-  // }
+
   .projects {
     width: 100%;
     display: flex;

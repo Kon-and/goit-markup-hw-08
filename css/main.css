@@ -744,7 +744,6 @@ summary {
 .hero {
   padding: 118px 60px;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -774,11 +773,15 @@ summary {
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-mob.jpg");
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .hero {
     padding: 118px 204px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background-tab.jpg");
   }
   .hero__title {
     font-size: 26px;
@@ -793,6 +796,7 @@ summary {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/background.jpg");
   }
   .hero__title {
     font-size: 44px;
@@ -988,7 +992,7 @@ summary {
   height: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -997,13 +1001,9 @@ summary {
     flex-direction: column;
     align-items: center;
   }
-  .team__img {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 769px) and (max-width: 1199px) {
   .team {
     display: flex;
     align-items: center;
@@ -1033,6 +1033,9 @@ summary {
   }
   .team__item + .team__item {
     margin-left: 30px;
+  }
+  .team__img {
+    max-width: 270px;
   }
 }
 
@@ -1334,6 +1337,7 @@ summary {
 .filters {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .filters .filters__item + .filters__item {
@@ -1368,6 +1372,7 @@ summary {
   .filters {
     display: flex;
     justify-content: center;
+    margin-bottom: 14px;
   }
 }
 
@@ -1375,31 +1380,31 @@ summary {
   .filters {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 }
 
-.projects .projects__title {
+.projects__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
-.projects .projects__text {
+.projects__text {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--text-second);
 }
 
-.projects .projects__items {
+.projects__items {
   background: var(--main-color);
   box-sizing: border-box;
   position: relative;
 }
 
-.projects .projects__link {
+.projects__link {
   display: block;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1407,12 +1412,12 @@ summary {
   transition-property: box-shadow;
 }
 
-.projects .projects__link:hover, .projects .projects__link:focus {
+.projects__link:hover, .projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects .projects__link:hover .description__text,
-.projects .projects__link:focus .description__text {
+.projects__link:hover .description__text,
+.projects__link:focus .description__text {
   transform: translateY(0);
 }
 
@@ -1462,12 +1467,16 @@ summary {
   .projects {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
   }
-  .projects__items:not(:last-child) {
+  .border {
+    width: 354px;
+    height: 146px;
+  }
+  .projects__items {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
-  }
-  .projects__items:nth-child(even) {
-    margin-left: 30px;
   }
 }
 
