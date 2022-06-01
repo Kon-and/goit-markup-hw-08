@@ -16,6 +16,10 @@
   transition-property: fill;
 }
 
+.header__container {
+  border-bottom: 1px solid #ececec;
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .header {
     .header__container {
