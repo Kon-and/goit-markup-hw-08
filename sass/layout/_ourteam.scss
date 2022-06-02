@@ -30,11 +30,6 @@
   }
 }
 
-.section__otherbackground {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
 .socials {
   @include flex(flex, center, null);
   .socials__link {

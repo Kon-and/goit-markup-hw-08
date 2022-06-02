@@ -8,9 +8,13 @@
 }
 
 .form__field {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
+.checkbox {
+  color: var(--text-second);
+  margin-bottom: 10px;
+}
 .modal {
   width: 90vw;
   max-width: 450px;
@@ -36,6 +40,9 @@
     padding: 12px 12px 12px 42px;
     @include animate();
     transition-property: outline-color;
+  }
+  .modal__field {
+    color: var(--text-second);
   }
   .modal__label {
     display: block;

@@ -34,13 +34,13 @@
   margin-bottom: 30px;
   @include flex();
   min-height: 120px;
-  // max-width: 450px;
+  min-width: 270px;
 }
 .advantage__text {
   @include font(14px, null, 24px, 0.03em, null);
   color: var(--text-second);
   margin-top: 10px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 }
 
 .advantage__icon {
